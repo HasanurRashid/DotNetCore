@@ -20,7 +20,7 @@ foreach (int item in items)
 //    return a < b;
 //}
 
-bool Check(int a, int b) => a < b;
+bool Check(int a, int b) => a < b; // lambda expression
 
 Person[] person = new Person[]
 {
