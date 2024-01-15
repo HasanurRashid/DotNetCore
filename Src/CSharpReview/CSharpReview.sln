@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReflectionCopy2", "Reflecti
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Delegates", "Delegates\Delegates.csproj", "{612F3B97-8BE7-46DD-9A91-E8FF0AD4B3C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Events", "Events\Events.csproj", "{B584458A-F540-4F15-92A5-0F0D446FF71A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Events", "Events\Events.csproj", "{B584458A-F540-4F15-92A5-0F0D446FF71A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assaignment1Input", "Assaignment1Input\Assaignment1Input.csproj", "{5ABCAB0B-0AB0-47D4-ACE8-5006E715B9C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{B584458A-F540-4F15-92A5-0F0D446FF71A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B584458A-F540-4F15-92A5-0F0D446FF71A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B584458A-F540-4F15-92A5-0F0D446FF71A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5ABCAB0B-0AB0-47D4-ACE8-5006E715B9C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5ABCAB0B-0AB0-47D4-ACE8-5006E715B9C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5ABCAB0B-0AB0-47D4-ACE8-5006E715B9C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5ABCAB0B-0AB0-47D4-ACE8-5006E715B9C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
