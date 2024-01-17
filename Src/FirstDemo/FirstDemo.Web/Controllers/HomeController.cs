@@ -16,7 +16,11 @@ namespace FirstDemo.Web.Controllers
         public IActionResult Index()
         {
             var rawStringLiteral = """ This is Hasan""";
-            return View();
+
+            var model = new IndexModel();
+            model.Message = "Hello World";
+
+            return View(model);
         }
 
         public IActionResult Privacy()
