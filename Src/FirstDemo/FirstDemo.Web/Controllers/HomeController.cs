@@ -8,11 +8,14 @@ namespace FirstDemo.Web.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         IEmailSender _emailSender;
+        private readonly ISmsSender _smsSender;
 
-        public HomeController(ILogger<HomeController> logger, IEmailSender emailSender)
+        public HomeController(ILogger<HomeController> logger, IEmailSender emailSender,ISmsSender smsSender)
         {
             _logger = logger;
             _emailSender= emailSender;
+            _smsSender = smsSender; 
+
         }
 
         public IActionResult Index()
