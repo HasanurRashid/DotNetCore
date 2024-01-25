@@ -21,7 +21,7 @@ namespace FirstDemo.Web.Controllers
         public IActionResult Index()
         {
             var rawStringLiteral = """ This is Hasan""";
-
+            
             var model = new IndexModel();
             model.Message = "Hello World";
 

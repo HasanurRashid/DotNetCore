@@ -1,18 +1,34 @@
-using Autofac;
+            using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using FirstDemo.Web;
 using FirstDemo.Web.Data;
 using FirstDemo.Web.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Internal;
+using Serilog;
+using Serilog.Events;
 
 var builder = WebApplication.CreateBuilder(args);
+//Serilog configuration started here
 
+builder.Host.UseSerilog((ctx, lc) => lc
+.MinimumLevel.Debug()
+.MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
+.Enrich.FromLogContext()
+.ReadFrom.Configuration(builder.Configuration));
+
+//Serilog configuration ends here
+
+try { 
+
+//AutoFac started here
 builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
 builder.Host.ConfigureContainer<ContainerBuilder>(containerBuilder =>
 {
     containerBuilder.RegisterModule(new WebModule());
 });
+//AutoFac ends here
 
 // Add services to the container.
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
@@ -55,3 +71,13 @@ app.MapControllerRoute(
 app.MapRazorPages();
 
 app.Run();
+    Log.Information("Application Starting ....");
+}
+catch(Exception ex)
+{
+    Log.Fatal(ex, "Failed to start application");
+}
+finally
+{
+    Log.CloseAndFlush();
+}
