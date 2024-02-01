@@ -1,6 +1,7 @@
 ﻿using FirstDemo.Web.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using System.Security.Cryptography.X509Certificates;
 
 namespace FirstDemo.Web.Controllers
 {
@@ -25,6 +26,22 @@ namespace FirstDemo.Web.Controllers
             var model = new IndexModel();
             model.Message = "Hello World";
 
+            return View(model);
+        }
+
+        public IActionResult Test()
+        {
+            var model = new TestModels();
+            model.Email = "hasan@gamil.com";
+            return View(model);
+        }
+        [HttpPost,ValidateAntiForgeryToken]
+        public IActionResult Test(TestModels model)
+        {
+            if (ModelState.IsValid)
+            {
+                int x = 10;
+            }
             return View(model);
         }
 
