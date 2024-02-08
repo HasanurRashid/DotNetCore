@@ -1,0 +1,32 @@
+﻿
+@import "./_header.scss";
+
+.myClass {
+    background-color: $btnColor;
+}
+
+.myBtn2{
+    background-color: $btnColor;
+}
+
+.myDiv{
+    background-color: green;
+    button{
+        background-color:red;
+        &:hover{
+            background-color:white;
+        }
+    }
+}
+
+@mixin applyCss($color: blue,$backgroundColor: red) {
+    background-color: $backgroundColor;
+    color: $color;
+}
+
+.myNewDiv {
+   @include applyCss(white,black);
+}
+
+body {
+}

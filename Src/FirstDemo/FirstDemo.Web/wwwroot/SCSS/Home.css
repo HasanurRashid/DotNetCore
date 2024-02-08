@@ -1,0 +1,22 @@
+﻿.myClass {
+  background-color: red;
+}
+
+.myBtn2 {
+  background-color: red;
+}
+
+.myDiv {
+  background-color: green;
+}
+.myDiv button {
+  background-color: red;
+}
+.myDiv button:hover {
+  background-color: white;
+}
+
+.myNewDiv {
+  background-color: black;
+  color: white;
+}
