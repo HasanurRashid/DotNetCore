@@ -47,6 +47,10 @@ namespace FirstDemo.Web.Controllers
 
         public IActionResult Privacy()
         {
+            List<string> items = new List<string>();
+            items.Add("Hello");
+            items.Remove("Hello");
+            items[0] = "World";
             return View();
         }
 
